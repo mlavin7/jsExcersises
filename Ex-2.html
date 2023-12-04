@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+            /* The Grade Assigner*/
+            
+
+            function assignGrade (score) {
+                if ( score  > 0 && score < 4) { return 'F'} 
+                else if ( score >=4 &&  score < 6)  { return ' D'} 
+                else if ( score >= 6 && score < 8 ) { return ' C'}
+                else if ( score >= 8 && score  < 9) { return 'B'}
+                else if ( score >= 9 && score == 10) { return ' A'}
+                else if ( score > 10) { return ' the test only have 10 points'}
+                else { return ' there is no negative points for the test'}
+
+            }
+
+            console.log ( assignGrade ( 2) )
+            console.log ( assignGrade (5) )
+            console.log ( assignGrade (6) )
+            console.log ( assignGrade (8) )
+            console.log ( assignGrade (10) )
+            console.log ( assignGrade (11) )
+            console.log ( assignGrade ( -1 ) )
+
+    </script>
+</body>
+</html>
