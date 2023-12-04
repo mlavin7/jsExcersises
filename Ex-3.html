@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function pluralize (numb , noun) {
+    /*
+    nouns will be goose, sheep, dog, cat
+    goose and sheep are unique (geese and sheep)
+    dog and cat or not (cats, dogs)
+    when its 1 the noun is unchanged because we are pluralizing 
+    - When its everything but 1, I have two cases
+      - > either regular noun and then add s at the end
+      -> or irregular and the noun change for different word (goose and sheep ex)
+
+      More specivic
+      When num is greater than 1 then I have to get the number declared + noun pluralizer in a string
+
+      When num is greater than 1 AND when noun is irregular (goose, sheep, etc), then we do unique things
+      else, when num is greater than 1 and noun is regular (dog, cat, etc) then we just add an s
+      else, when num is less than or equal to 1 we DO NOT change the noun
+    */
+
+    if ( numb > 1 && noun == 'goose' ) { return ` ${numb} geese`  }
+     
+    else if ( numb > 1 && noun == 'sheep') { return ` ${numb} sheep`}
+else if ( numb > 1 ) { return ` ${ numb} ${noun}'s`}
+   
+    else { return ` ${numb} ${ noun}`}
+// if ( numb ==1 ) { 
+//     message =  ` 1 ${noun}`}
+// else if ( numb < 1 || numb > 1) { 
+//     message= ` ${numb} ${noun}`+'s'}
+// else if ( ( numb < 1 || numb > 1) && noun == 'child') { 
+//     message =` ${numb } children `}
+// else if (  (numb < 1 || numb > 1 )&& noun == 'sheep') { 
+//     message =  ` ${numb } sheep `}
+// else if (  (numb < 1 || numb > 1 )&& noun == 'fish') { 
+//     message =  ` ${numb } fish `}
+// else if (  (numb < 1 || numb > 1 )&& noun == 'deer') { 
+//     message =` ${numb } deer `}
+// else if (  (numb < 1 || numb > 1 )&& noun == ' wolf') { 
+//     message = ` ${numb } wolf `}
+// else if (  (numb < 1 || numb > 1 )&& noun == ' ox') { 
+//     message =  ` ${numb } oxen `}
+// else if (  (numb < 1 || numb > 1 )&& noun == ' mouse') { 
+//     message = ` ${numb } mice `}
+// else if (  (numb < 1 || numb > 1 )&& noun == ' man') { 
+//     message =  ` ${numb } men `}
+// else if (  (numb < 1 || numb > 1 )&& noun == ' woman') { 
+//     message =` ${numb } women `}
+// else if (  (numb < 1 || numb > 1 )&& noun == ' goose') { 
+//     message ` ${numb } geese `}
+// }       
+
+
+
+
+}
+
+
+
+
+console.log ( pluralize( 1, 'dude' ))
+console.log ( pluralize( 2,'girl'  ))
+console.log ( pluralize( 1, 'woman' ))
+console.log ( pluralize( 3, 'woman' ))
+console.log ( pluralize(  4, 'goose'))
+console.log ( pluralize(  1, 'goose'))
+
+
+    </script>
+
+
+</body>
+</html>
